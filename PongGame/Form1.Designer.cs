@@ -46,9 +46,10 @@
             this.p1ScoreLabel.BackColor = System.Drawing.Color.Transparent;
             this.p1ScoreLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p1ScoreLabel.ForeColor = System.Drawing.Color.White;
-            this.p1ScoreLabel.Location = new System.Drawing.Point(133, 9);
+            this.p1ScoreLabel.Location = new System.Drawing.Point(177, 11);
+            this.p1ScoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p1ScoreLabel.Name = "p1ScoreLabel";
-            this.p1ScoreLabel.Size = new System.Drawing.Size(100, 23);
+            this.p1ScoreLabel.Size = new System.Drawing.Size(133, 28);
             this.p1ScoreLabel.TabIndex = 0;
             this.p1ScoreLabel.Text = "0";
             this.p1ScoreLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -58,9 +59,10 @@
             this.p2ScoreLabel.BackColor = System.Drawing.Color.Transparent;
             this.p2ScoreLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.p2ScoreLabel.ForeColor = System.Drawing.Color.White;
-            this.p2ScoreLabel.Location = new System.Drawing.Point(360, 9);
+            this.p2ScoreLabel.Location = new System.Drawing.Point(480, 11);
+            this.p2ScoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.p2ScoreLabel.Name = "p2ScoreLabel";
-            this.p2ScoreLabel.Size = new System.Drawing.Size(100, 23);
+            this.p2ScoreLabel.Size = new System.Drawing.Size(133, 28);
             this.p2ScoreLabel.TabIndex = 1;
             this.p2ScoreLabel.Text = "0";
             this.p2ScoreLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -70,24 +72,26 @@
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
             this.winLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.White;
-            this.winLabel.Location = new System.Drawing.Point(137, 133);
+            this.winLabel.Location = new System.Drawing.Point(183, 164);
+            this.winLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.winLabel.Name = "winLabel";
-            this.winLabel.Size = new System.Drawing.Size(331, 23);
+            this.winLabel.Size = new System.Drawing.Size(441, 28);
             this.winLabel.TabIndex = 2;
-            this.winLabel.Text = "----";
+            this.winLabel.Text = "Press [Space] To Start";
             this.winLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.ClientSize = new System.Drawing.Size(800, 492);
             this.Controls.Add(this.winLabel);
             this.Controls.Add(this.p2ScoreLabel);
             this.Controls.Add(this.p1ScoreLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
