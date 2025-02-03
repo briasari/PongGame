@@ -23,8 +23,8 @@ namespace PongGame
         int player2Score = 0;
 
         int playerSpeed = 4;
-        int ballXSpeed = 6;
-        int ballYSpeed = -6;
+        int ballXSpeed = 7;
+        int ballYSpeed = -7;
 
         int round = 1;
 
