@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.Threading;
 
 namespace PongGame
 {
     public partial class Form1 : Form
     {
-
         Rectangle player1 = new Rectangle(10, 140, 10, 60);
         Rectangle player2 = new Rectangle(10, 210, 10, 60);
         Rectangle border = new Rectangle(8, 208, 14, 64);
@@ -43,6 +44,8 @@ namespace PongGame
         SolidBrush whiteBrush = new SolidBrush(Color.White);
 
         Random randGen = new Random();
+
+        SoundPlayer hitPlayer = new SoundPlayer(Properties.Resources.hitSound);
 
         public Form1()
         {
@@ -184,6 +187,7 @@ namespace PongGame
 
                     if (border.IntersectsWith(ball))
                     {
+                        hitPlayer.Play();
                         ballXSpeed = -ballXSpeed;
                         ball.X = player2.X + player2.Width;
                         round++;
@@ -196,6 +200,7 @@ namespace PongGame
 
                     if (border.IntersectsWith(ball))
                     {
+                        hitPlayer.Play();
                         ballXSpeed = -ballXSpeed;
                         ball.X = player1.X + player1.Width;
                         round++;
@@ -209,6 +214,7 @@ namespace PongGame
                 {
                     if (border.X == player2.X - 2)
                     {
+                        hitPlayer.Play();
                         player1Score++;
                         p1ScoreLabel.Text = $"{player1Score}";
                         ball.X = 295;
@@ -216,6 +222,7 @@ namespace PongGame
                     }
                     else
                     {
+                        hitPlayer.Play();
                         player2Score++;
                         p2ScoreLabel.Text = $"{player2Score}";
                         ball.X = 295;
@@ -236,6 +243,7 @@ namespace PongGame
                 //check if ball goes off right side of screen
                 if (ball.X == this.Width)
                 {
+                    hitPlayer.Play();
                     ballXSpeed = -ballXSpeed;
                 }
 
